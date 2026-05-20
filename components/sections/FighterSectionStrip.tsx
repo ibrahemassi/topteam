@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/cn";
+import { getAssetPath } from "@/lib/assets";
 
 export type FighterStripItem = {
   id?: string;
@@ -27,7 +28,7 @@ export function FighterSectionStrip({ fighters }: FighterSectionStripProps) {
               <div className="relative aspect-3/4.2 w-full">
                 {/* Desaturated Fighter Image */}
                 <Image
-                  src={f.image}
+                  src={getAssetPath(f.image)}
                   alt={f.name}
                   fill
                   className="object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { getAssetPath } from "@/lib/assets";
 
 const links = [
   { href: "/", label: "Home", match: (p: string) => p === "/" },
@@ -92,101 +93,103 @@ export function Navbar() {
   }, [closeMenu]);
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-500 ease-out",
-        scrolled || menuOpen
-          ? "border-b border-[#1f00ff]/40 bg-white/10 backdrop-blur-md shadow-[0_6px_32px_rgba(31,0,255,0.55),0_1px_0_rgba(255,255,255,0.08)_inset]"
-          : "border-b border-transparent bg-transparent shadow-none",
-      )}
-    >
-      <nav
-        ref={navInnerRef}
-        className="flex w-full items-center justify-between gap-3 py-3.5 pl-2 pr-4 sm:pl-3 sm:pr-6 lg:grid lg:grid-cols-3 lg:items-center lg:gap-4 lg:py-4 lg:pl-6 lg:pr-8"
-        aria-label="Primary"
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-500 ease-out",
+          scrolled || menuOpen
+            ? "border-b border-[#1f00ff]/40 bg-white/10 backdrop-blur-md shadow-[0_6px_32px_rgba(31,0,255,0.55),0_1px_0_rgba(255,255,255,0.08)_inset]"
+            : "border-b border-transparent bg-transparent shadow-none",
+        )}
       >
-        <div className="flex shrink-0 justify-self-start lg:pl-0">
-          <Link
-            href="/"
-            className="flex shrink-0 items-center"
-            aria-label="Afara Top Team — Home"
-            onClick={closeMenu}
-          >
-            <Image
-              src="/Logo-from-the-back.png"
-              alt=""
-              width={192}
-              height={192}
-              className="h-14 w-14 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
-              priority
-            />
-          </Link>
-        </div>
-
-        <div className="hidden min-w-0 justify-center overflow-x-auto lg:flex lg:w-full [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
-          <ul className="flex flex-nowrap items-center justify-center gap-3 text-[10px] font-medium uppercase tracking-wider text-zinc-300 lg:gap-4 xl:gap-5 xl:text-xs xl:tracking-widest 2xl:text-sm 2xl:gap-6">
-            {links.map((l) => {
-              const active = l.match(pathname);
-              return (
-                <li key={`${l.href}-${l.label}`} className="shrink-0">
-                  <Link
-                    href={l.href}
-                    className={cn(
-                      "whitespace-nowrap border-b pb-0.5 transition-colors",
-                      active
-                        ? "border-[#1f00ff] text-white"
-                        : "border-transparent hover:border-[#1f00ff]/60 hover:text-white",
-                    )}
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="flex shrink-0 items-center justify-end gap-2 sm:gap-3 justify-self-end lg:pr-0">
-          <Link
-            href="/#hero-cta"
-            className="hidden rounded border border-[#1f00ff]/60 bg-[#1f00ff]/20 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-[0_0_18px_rgba(31,0,255,0.45)] transition hover:bg-[#1f00ff]/35 lg:inline-flex"
-          >
-            Free session
-          </Link>
-          <Link
-            href="/#hero-cta"
-            className="rounded border border-[#1f00ff]/60 bg-[#1f00ff]/20 px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-white shadow-[0_0_14px_rgba(31,0,255,0.4)] transition hover:bg-[#1f00ff]/35 sm:px-4 sm:text-xs lg:hidden"
-            onClick={closeMenu}
-          >
-            Free session
-          </Link>
-          <button
-            type="button"
-            id="nav-burger"
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={toggleMenu}
-            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 text-white transition hover:border-[#1f00ff]/50 hover:bg-white/5 lg:hidden"
-          >
-            <span className="sr-only">{menuOpen ? "Close" : "Menu"}</span>
-            <svg
-              viewBox="0 0 24 24"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              aria-hidden
+        <nav
+          ref={navInnerRef}
+          className="flex w-full items-center justify-between gap-3 py-3.5 pl-2 pr-4 sm:pl-3 sm:pr-6 lg:grid lg:grid-cols-3 lg:items-center lg:gap-4 lg:py-4 lg:pl-6 lg:pr-8"
+          aria-label="Primary"
+        >
+          <div className="flex shrink-0 justify-self-start lg:pl-0">
+            <Link
+              href="/"
+              className="flex shrink-0 items-center"
+              aria-label="Afara Top Team — Home"
+              onClick={closeMenu}
             >
-              {menuOpen ? (
-                <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
-              ) : (
-                <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-      </nav>
+              <Image
+                src={getAssetPath("/Logo-from-the-back.png")}
+                alt=""
+                width={192}
+                height={192}
+                className="h-14 w-14 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
+                priority
+              />
+            </Link>
+          </div>
+
+          <div className="hidden min-w-0 justify-center overflow-x-auto lg:flex lg:w-full [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
+            <ul className="flex flex-nowrap items-center justify-center gap-3 text-[10px] font-medium uppercase tracking-wider text-zinc-300 lg:gap-4 xl:gap-5 xl:text-xs xl:tracking-widest 2xl:text-sm 2xl:gap-6">
+              {links.map((l) => {
+                const active = l.match(pathname);
+                return (
+                  <li key={`${l.href}-${l.label}`} className="shrink-0">
+                    <Link
+                      href={l.href}
+                      className={cn(
+                        "whitespace-nowrap border-b pb-0.5 transition-colors",
+                        active
+                          ? "border-[#1f00ff] text-white"
+                          : "border-transparent hover:border-[#1f00ff]/60 hover:text-white",
+                      )}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className="flex shrink-0 items-center justify-end gap-2 sm:gap-3 justify-self-end lg:pr-0">
+            <Link
+              href="/#hero-cta"
+              className="hidden rounded border border-[#1f00ff]/60 bg-[#1f00ff]/20 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-[0_0_18px_rgba(31,0,255,0.45)] transition hover:bg-[#1f00ff]/35 lg:inline-flex"
+            >
+              Free session
+            </Link>
+            <Link
+              href="/#hero-cta"
+              className="rounded border border-[#1f00ff]/60 bg-[#1f00ff]/20 px-3 py-2 text-[10px] font-semibold uppercase tracking-wider text-white shadow-[0_0_14px_rgba(31,0,255,0.4)] transition hover:bg-[#1f00ff]/35 sm:px-4 sm:text-xs lg:hidden"
+              onClick={closeMenu}
+            >
+              Free session
+            </Link>
+            <button
+              type="button"
+              id="nav-burger"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              onClick={toggleMenu}
+              className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 text-white transition hover:border-[#1f00ff]/50 hover:bg-white/5 lg:hidden"
+            >
+              <span className="sr-only">{menuOpen ? "Close" : "Menu"}</span>
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                aria-hidden
+              >
+                {menuOpen ? (
+                  <path strokeLinecap="round" d="M6 6l12 12M18 6L6 18" />
+                ) : (
+                  <path strokeLinecap="round" d="M4 7h16M4 12h16M4 17h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
 
       <div
         className={cn(
@@ -233,6 +236,6 @@ export function Navbar() {
           })}
         </ul>
       </div>
-    </header>
+    </>
   );
 }

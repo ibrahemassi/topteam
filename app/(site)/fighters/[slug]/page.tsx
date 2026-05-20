@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import site from "@/data/site.json";
 import { cn } from "@/lib/cn";
+import { getAssetPath } from "@/lib/assets";
 import { 
   Camera, 
   MessageCircle, 
@@ -54,7 +55,7 @@ export default async function FighterPage({ params }: FighterPageProps) {
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={fighter.imageLocalPath}
+          src={getAssetPath(fighter.imageLocalPath)}
           alt=""
           fill
           className="object-cover opacity-10 blur-2xl grayscale"
@@ -72,7 +73,7 @@ export default async function FighterPage({ params }: FighterPageProps) {
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-900/30 shadow-2xl backdrop-blur-xl">
               {/* 1. Background Image Layer */}
               <Image
-                src={fighter.imageLocalPath}
+                src={getAssetPath(fighter.imageLocalPath)}
                 alt=""
                 fill
                 className="z-0 object-cover object-top opacity-40 blur-[2px]"
@@ -93,7 +94,7 @@ export default async function FighterPage({ params }: FighterPageProps) {
 
               {/* 3. Top Layer: Foreground Image (no background) */}
               <Image
-                src={fighter.imageNoBg || fighter.imageLocalPath}
+                src={getAssetPath(fighter.imageNoBg || fighter.imageLocalPath)}
                 alt={fighter.name}
                 fill
                 className="z-20 object-cover object-top transition-transform duration-700 hover:scale-105"
@@ -169,11 +170,11 @@ export default async function FighterPage({ params }: FighterPageProps) {
 
                   <div className="mt-8 flex items-center justify-between gap-4">
                     <div className="relative h-16 w-16 overflow-hidden rounded-full border border-zinc-100 bg-zinc-50 p-2">
-                      <Image src="/Logo-from-the-back.png" alt="Gym" fill className="object-contain p-2" />
+                      <Image src={getAssetPath("/Logo-from-the-back.png")} alt="Gym" fill className="object-contain p-2" />
                     </div>
                     <span className="text-sm font-black italic text-zinc-300">VS</span>
                     <div className="relative h-16 w-16 overflow-hidden rounded-full border border-zinc-100 bg-zinc-50 p-2">
-                      <Image src={fighter.nextMatch?.logo || "/Logo-from-the-back.png"} alt="Opponent" fill className="object-contain p-2" />
+                      <Image src={getAssetPath(fighter.nextMatch?.logo || "/Logo-from-the-back.png")} alt="Opponent" fill className="object-contain p-2" />
                     </div>
                   </div>
 
@@ -195,7 +196,7 @@ export default async function FighterPage({ params }: FighterPageProps) {
                     >
                       <div className="flex items-center gap-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full bg-white/5 p-1.5">
-                          <Image src="/Logo-from-the-back.png" alt="Opponent" fill className="object-contain p-1.5 grayscale opacity-40" />
+                          <Image src={getAssetPath("/Logo-from-the-back.png")} alt="Opponent" fill className="object-contain p-1.5 grayscale opacity-40" />
                         </div>
                         <div>
                           <p className="text-[9px] font-bold uppercase tracking-widest text-zinc-500">{match.date}</p>

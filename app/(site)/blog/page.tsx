@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { urlFor } from '@/lib/sanity'
+import { getAssetPath } from '@/lib/assets'
 
 export const metadata: Metadata = {
   title: 'Blog | Afara Top Team',
@@ -109,7 +110,7 @@ export default async function BlogPage() {
                   <p className="text-zinc-300 max-w-xl line-clamp-2">{featuredPost.smallDescription}</p>
                   <div className="mt-8 flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full border border-[#ffc200]/30 overflow-hidden bg-black">
-                      <Image src="/Logo-from-the-back.png" alt="Logo" width={48} height={48} />
+                      <Image src={getAssetPath("/Logo-from-the-back.png")} alt="Logo" width={48} height={48} />
                     </div>
                     <div>
                       <div className="text-sm font-bold">Afara Top Team</div>

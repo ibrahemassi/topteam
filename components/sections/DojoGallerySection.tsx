@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 
 export type GalleryImage = {
   src: string;
@@ -35,7 +36,7 @@ export function DojoGallerySection({ images }: DojoGallerySectionProps) {
               className="group relative aspect-[4/5] overflow-hidden rounded-xl border border-white/15 bg-[#10011f]"
             >
               <Image
-                src={item.src}
+                src={getAssetPath(item.src)}
                 alt={item.alt}
                 fill
                 className="object-cover transition duration-500 group-hover:scale-105"

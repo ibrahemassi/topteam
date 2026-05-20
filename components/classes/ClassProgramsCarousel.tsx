@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import { getAssetPath } from "@/lib/assets";
 import {
   Carousel,
   type CarouselApi,
@@ -157,7 +158,7 @@ function ProgramSlideCardClassic({
     >
       <div className="relative aspect-[4/3] w-full shrink-0 bg-[#10011f]">
         <Image
-          src={item.imageSrc}
+          src={getAssetPath(item.imageSrc)}
           alt={item.imageAlt}
           fill
           className="object-cover"
@@ -216,7 +217,7 @@ function ProgramSlideCard({
       )}
     >
       <Image
-        src={item.imageSrc}
+        src={getAssetPath(item.imageSrc)}
         alt={item.imageAlt}
         fill
         className="object-cover"

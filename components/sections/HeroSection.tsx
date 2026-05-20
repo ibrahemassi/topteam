@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
+import { getAssetPath } from "@/lib/assets";
 
 export type HeroCarouselCard = {
   eyebrow: string;
@@ -71,10 +72,10 @@ export function HeroSection({ videoSrc, posterSrc, cards }: HeroSectionProps) {
         muted
         loop
         playsInline
-        poster={posterSrc}
+        poster={getAssetPath(posterSrc)}
         aria-hidden
       >
-        <source src={videoSrc} type="video/mp4" />
+        <source src={getAssetPath(videoSrc)} type="video/mp4" />
       </video>
       <div
         className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-transparent lg:via-black/35"
@@ -152,7 +153,7 @@ export function HeroSection({ videoSrc, posterSrc, cards }: HeroSectionProps) {
                 )}
               >
                 <Image
-                  src={c.src}
+                  src={getAssetPath(c.src)}
                   alt={`${c.line1} ${c.line2} — ${c.eyebrow}`}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"

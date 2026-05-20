@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { GlassPanel } from "@/components/GlassPanel";
 import { getSiteData } from "@/lib/site-data";
 import { pexelsUrl } from "@/lib/pexels-url";
+import { getAssetPath } from "@/lib/assets";
 
 export function generateStaticParams() {
   return getSiteData().classes.map((c) => ({ slug: c.id }));
@@ -27,7 +28,7 @@ export default async function ClassDetailPage({ params }: Props) {
   const c = getSiteData().classes.find((x) => x.id === slug);
   if (!c) notFound();
 
-  const img = c.imageLocalPath ?? pexelsUrl(c.imagePexelsId, 1400);
+  const img = getAssetPath(c.imageLocalPath ?? pexelsUrl(c.imagePexelsId, 1400));
 
   return (
     <div className="bg-black pb-24 pt-28 lg:pt-32">

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/assets";
 
 const business = [
   { href: "/", label: "Home" },
@@ -38,7 +39,7 @@ export function FooterSection() {
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/Logo-from-the-back.png"
+              src={getAssetPath("/Logo-from-the-back.png")}
               alt="Afara Top Team"
               width={44}
               height={44}

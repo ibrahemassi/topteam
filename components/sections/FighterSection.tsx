@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/cn";
+import { getAssetPath } from "@/lib/assets";
 
 export type FighterCard = {
   id?: string;
@@ -56,7 +57,7 @@ export function FighterSection({
               <>
                 {/* Main Fighter Image */}
                 <Image
-                  src={f.image}
+                  src={getAssetPath(f.image)}
                   alt={f.alt ?? f.name}
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
@@ -69,7 +70,7 @@ export function FighterSection({
                     <div className="flex items-center gap-2.5">
                       <div className="relative h-8 w-8 overflow-hidden rounded-full border border-[#1f00ff]/40 bg-black">
                         <Image
-                          src="/Logo-from-the-back.png"
+                          src={getAssetPath("/Logo-from-the-back.png")}
                           alt="Logo"
                           fill
                           className="object-contain p-1"
