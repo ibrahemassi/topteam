@@ -7,10 +7,14 @@ import Link from 'next/link'
 import { urlFor } from '@/lib/sanity'
 
 export async function generateStaticParams() {
+  // Return empty array for now to skip static generation of blog posts
+  return []
+  /*
   const posts = await getPublishedPosts()
   return posts.map((post) => ({
     slug: post.slug.current,
   }))
+  */
 }
 
 interface BlogPostPageProps {

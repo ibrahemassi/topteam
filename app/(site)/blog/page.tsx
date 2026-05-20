@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 }
 
 export default async function BlogPage() {
-  const posts = await getPublishedPosts()
+  // Commented out Sanity fetch for now
+  // const posts = await getPublishedPosts()
+  const posts: any[] = []
   
   const featuredPost = posts[0]
   const secondaryPosts = posts.slice(1, 3)
