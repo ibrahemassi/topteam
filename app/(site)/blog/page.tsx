@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { urlFor } from '@/lib/sanity'
 
-export const dynamic = 'force-dynamic'
-
 export const metadata: Metadata = {
   title: 'Blog | Afara Top Team',
   description: 'Latest news, training tips, and updates from the dojo.',
