@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/lib/blog'
+import { getPostBySlug, getPublishedPosts } from '@/lib/blog'
 import BlogBodyRenderer from '@/components/blog/BlogBodyRenderer'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -6,7 +6,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { urlFor } from '@/lib/sanity'
 
-export const dynamic = 'force-dynamic'
+export async function generateStaticParams() {
+  const posts = await getPublishedPosts()
+  return posts.map((post) => ({
+    slug: post.slug.current,
+  }))
+}
 
 interface BlogPostPageProps {
   params: { slug: string }

@@ -21,6 +21,12 @@ interface FighterPageProps {
   }>;
 }
 
+export function generateStaticParams() {
+  return site.fighters.map((f) => ({
+    slug: f.id,
+  }));
+}
+
 export async function generateMetadata({ params }: FighterPageProps): Promise<Metadata> {
   const { slug } = await params;
   const fighter = site.fighters.find((f) => f.id === slug);
