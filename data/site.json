@@ -1,0 +1,361 @@
+{
+  "brand": {
+    "fullName": "Afara Top Team",
+    "shortName": "Afara Top Team"
+  },
+  "hero": {
+    "videoSrc": "/videos/1.mp4",
+    "posterImageId": 8411304
+  },
+  "gallery": [
+    { "pexelsId": 4761663, "alt": "Heavy bag and striking work" },
+    { "pexelsId": 4753996, "alt": "Gym floor and training rings" },
+    { "pexelsId": 4753987, "alt": "Partner drills and pads" },
+    { "pexelsId": 1547248, "alt": "Strength and conditioning bay" }
+  ],
+  "classes": [
+    {
+      "id": "muay-thai",
+      "title": "Muay Thai",
+      "monthlyFrom": "$129",
+      "cardBadges": ["All levels", "Comp track"],
+      "subtitle": "National sport of Thailand — the art of eight limbs.",
+      "description": "Sharp kicks, ruthless clinch chains, elbows, and fight IQ under fatigue. Built on bags, pads, and honest sparring progressions.",
+      "overview": "Muay Thai at Afara Top Team emphasizes technical striking, cardio that carries into real exchanges, and a culture of respect inside hard rounds. Coaches ladder you from novice footwork through ring-style pacing.",
+      "focus": ["Kick mechanics & balance", "Clinch wrestling", "Fight-style conditioning"],
+      "imagePexelsId": 6295875,
+      "imageLocalPath": "/classImges/muayThai.jpg",
+      "featuredHome": true,
+      "heroCard": {
+        "eyebrow": "Striking floor",
+        "line1": "MUAY THAI",
+        "line2": "EIGHT LIMBS"
+      }
+    },
+    {
+      "id": "boxing",
+      "title": "Boxing",
+      "monthlyFrom": "$109",
+      "cardBadges": ["Beginner friendly", "Spar optional"],
+      "subtitle": "Pure hands — footwork, head movement, pacing.",
+      "description": "Classic sweet science sharpened with modern athletics: defense-first fundamentals, combos that travel, and power you can steer.",
+      "overview": "Boxers here spend real time on the basics that win rounds: slips, exits, tempo changes, and clean straight lines. Bags, mitts, and controlled technical sparring reinforce what you drill.",
+      "focus": ["Footwork grids", "Defensive layers", "Interval power"],
+      "imagePexelsId": 4753987,
+      "imageLocalPath": "/classImges/boxing.jpg",
+      "featuredHome": true,
+      "heroCard": {
+        "eyebrow": "Sweet science",
+        "line1": "BOXING",
+        "line2": "TECH & SPRING"
+      }
+    },
+    {
+      "id": "mma",
+      "title": "MMA",
+      "monthlyFrom": "$149",
+      "cardBadges": ["Invite only spar", "Fight camp"],
+      "subtitle": "Blend striking, wrestling, and finishing instincts.",
+      "description": "Position-to-position rounds that force real transitions: cage craft, scramble defense, top pressure, and composure.",
+      "overview": "MMA classes splice stand-up shells with wrestling entries and ground-and-pound awareness. Sparring ramps are coached to role — no chaos without context.",
+      "focus": ["Cage wrestling", "Scrambles & resets", "Blended combos"],
+      "imagePexelsId": 7991672,
+      "imageLocalPath": "/classImges/mma.jpg",
+      "featuredHome": true,
+      "heroCard": {
+        "eyebrow": "Cage IQ",
+        "line1": "MMA",
+        "line2": "HYBRID LAB"
+      }
+    },
+    {
+      "id": "wrestling",
+      "title": "Wrestling",
+      "monthlyFrom": "$119",
+      "cardBadges": ["Youth + adult", "No-gi friendly"],
+      "subtitle": "Takedowns, rides, chains — dictate where the fight lives.",
+      "description": "From collar ties to relentless leg attacks: learn to impose ties, disrupt balance, and own the scramble.",
+      "overview": "Wrestling blocks feed both MMA and grappling pursuits. Afara Top Team builds chain wrestling and defensive instincts so exchanges don’t evaporate.",
+      "focus": ["Shot mechanics", "Ride & breakdowns", "Reshots & defense"],
+      "imagePexelsId": 1547248,
+      "imageLocalPath": "/classImges/wrestling.jpg",
+      "featuredHome": true,
+      "heroCard": {
+        "eyebrow": "Tie-ups",
+        "line1": "WRESTLING",
+        "line2": "CHAIN WORK"
+      }
+    }
+  ],
+  "coaches": [
+    {
+      "id": "dana-ortega",
+      "name": "Dana Ortega",
+      "role": "Director of Wrestling",
+      "bio": "NCAA-qualified athlete turned coach. Builds chain wrestling curricula for beginners through competitive adults.",
+      "disciplines": ["Wrestling", "MMA"],
+      "imagePexelsId": 7676508
+    },
+    {
+      "id": "marisol-vek",
+      "name": "Marisol Vek",
+      "role": "Head Muay Thai",
+      "bio": "Stadium-style pad holder and clinician. Passionate about clean mechanics and fearless clinch reps.",
+      "disciplines": ["Muay Thai", "Kickboxing"],
+      "imagePexelsId": 8438971
+    },
+    {
+      "id": "jax-pollard",
+      "name": "Jax Pollard",
+      "role": "Boxing Performance",
+      "bio": "Former regional amateur champion emphasizing defense-first pacing and repeatable power lanes.",
+      "disciplines": ["Boxing", "Strike conditioning"],
+      "imagePexelsId": 6740053
+    },
+    {
+      "id": "river-cheng",
+      "name": "River Cheng",
+      "role": "MMA strategist",
+      "bio": "Blur the lines responsibly — transitions, cage geography, and composure drills for hybrid athletes.",
+      "disciplines": ["MMA", "Kickboxing"],
+      "imagePexelsId": 8637142
+    }
+  ],
+  "fighters": [
+    {
+      "id": "mohamad-hasson",
+      "name": "MOHAMAD HASSON",
+      "nickname": "THE SILENT ASSASSIN",
+      "discipline": "Muay Thai / Boxing",
+      "imageLocalPath": "/fighters/mohamad-hasson.jpg",
+      "imageNoBg": "/fightersNoBackground/mohamad-hasson2.png",
+      "number": "22",
+      "stats": {
+        "rating": "8.9",
+        "marketValue": "$1.2M",
+        "accuracy": "94%"
+      },
+      "nextMatch": {
+        "opponent": "AL WARSHEH",
+        "date": "Friday, June 12",
+        "logo": "/Logo-from-the-back.png"
+      },
+      "matches": [
+        { "opponent": "GOC", "date": "May 05", "result": "WIN" },
+        { "opponent": "STRIKE", "date": "April 12", "result": "WIN" }
+      ],
+      "socials": {
+        "instagram": "https://instagram.com",
+        "twitter": "https://twitter.com"
+      },
+      "note": "Pro debut prep — Afara Top Team striking lab"
+    },
+    {
+      "id": "mohamad-koros",
+      "name": "MOHAMAD KOROS",
+      "nickname": "THE IRON WALL",
+      "discipline": "Wrestling / MMA",
+      "imageLocalPath": "/fighters/mohamd-koros.jpg",
+      "imageNoBg": "/fightersNoBackground/mohamd-koros2.png",
+      "number": "06",
+      "stats": {
+        "rating": "8.5",
+        "marketValue": "$850K",
+        "accuracy": "88%"
+      },
+      "nextMatch": {
+        "opponent": "LEBANON PRO",
+        "date": "Saturday, July 04",
+        "logo": "/Logo-from-the-back.png"
+      },
+      "matches": [
+        { "opponent": "CAGE", "date": "May 20", "result": "WIN" },
+        { "opponent": "MATS", "date": "March 15", "result": "LOSS" }
+      ],
+      "socials": {
+        "instagram": "https://instagram.com"
+      },
+      "note": "Regional amateur contender"
+    },
+    {
+      "id": "omar-antar",
+      "name": "OMAR ANTAR",
+      "nickname": "THE DESERT STORM",
+      "discipline": "Boxing",
+      "imageLocalPath": "/fighters/omar-antar.jpg",
+      "imageNoBg": "/fightersNoBackground/omar-antar2.png",
+      "number": "02",
+      "stats": {
+        "rating": "9.2",
+        "marketValue": "$2.1M",
+        "accuracy": "97%"
+      },
+      "nextMatch": {
+        "opponent": "GOLDEN GLOVES",
+        "date": "Friday, August 15",
+        "logo": "/Logo-from-the-back.png"
+      },
+      "matches": [
+        { "opponent": "TITAN", "date": "June 10", "result": "WIN" },
+        { "opponent": "APEX", "date": "February 22", "result": "WIN" }
+      ],
+      "socials": {
+        "instagram": "https://instagram.com",
+        "youtube": "https://youtube.com"
+      },
+      "note": "Golden Gloves finalist"
+    },
+    {
+      "id": "sammi-akawi",
+      "name": "SAMMI AKAWI",
+      "nickname": "THE GOLDEN BOY",
+      "discipline": "Boxing",
+      "imageLocalPath": "/fighters/sammi-akawi.jpg",
+      "imageNoBg": "/fightersNoBackground/sammi-akawi2.png",
+      "number": "33",
+      "stats": {
+        "rating": "8.7",
+        "marketValue": "$950K",
+        "accuracy": "91%"
+      },
+      "nextMatch": {
+        "opponent": "RING MASTERS",
+        "date": "Sunday, September 20",
+        "logo": "/Logo-from-the-back.png"
+      },
+      "matches": [
+        { "opponent": "GLOVE", "date": "July 05", "result": "WIN" },
+        { "opponent": "FIGHT", "date": "January 10", "result": "WIN" }
+      ],
+      "socials": {
+        "instagram": "https://instagram.com"
+      },
+      "note": "Golden Gloves finalist"
+    }
+  ],
+  "locations": [
+    {
+      "id": "saida",
+      "name": "Saida",
+      "addressLine1": "Coastal training bay — Saida",
+      "city": "Saida",
+      "region": "South Governorate",
+      "postalCode": "1600",
+      "phone": "+961 7 000 001",
+      "email": "saida@afaratopteam.demo"
+    },
+    {
+      "id": "barja",
+      "name": "Barja",
+      "addressLine1": "Ring road — Barja",
+      "city": "Barja",
+      "region": "Mount Lebanon",
+      "postalCode": "1501",
+      "phone": "+961 7 000 002",
+      "email": "barja@afaratopteam.demo"
+    },
+    {
+      "id": "kfarhata",
+      "name": "Kfarhata",
+      "addressLine1": "Village mat space — Kfarhata",
+      "city": "Kfarhata",
+      "region": "Mount Lebanon",
+      "postalCode": "1502",
+      "phone": "+961 7 000 003",
+      "email": "kfarhata@afaratopteam.demo"
+    },
+    {
+      "id": "ketermaya",
+      "name": "Ketermaya",
+      "addressLine1": "South bay — Ketermaya",
+      "city": "Ketermaya",
+      "region": "South Governorate",
+      "postalCode": "1601",
+      "phone": "+961 7 000 004",
+      "email": "ketermaya@afaratopteam.demo"
+    }
+  ],
+  "schedule": {
+    "saida": {
+      "week": "MAY 5 — MAY 11",
+      "days": [
+        { "day": "MON", "sub": "05", "slots": ["06:00 HIIT", "12:00 MT", "18:30 BJJ"] },
+        { "day": "TUE", "sub": "06", "slots": ["07:00 Spar", "17:00 BJJ", "20:00 MT"] },
+        { "day": "WED", "sub": "07", "slots": ["06:30 Open", "12:30 BJJ", "19:00 MT"] },
+        { "day": "THU", "sub": "08", "slots": ["06:00 BJJ", "18:00 MT", "20:30 Open"] },
+        { "day": "FRI", "sub": "09", "slots": ["07:00 MT", "12:00 BJJ", "17:30 Comp"] },
+        { "day": "SAT", "sub": "10", "slots": ["09:00 All-level", "11:00 Kids", "13:00 Open"] },
+        { "day": "SUN", "sub": "11", "slots": ["10:00 Recovery", "12:00 BJJ", "—"] }
+      ]
+    },
+    "barja": {
+      "week": "MAY 5 — MAY 11",
+      "days": [
+        { "day": "MON", "sub": "05", "slots": ["05:30 Roadwork", "11:00 BJJ", "19:00 MT"] },
+        { "day": "TUE", "sub": "06", "slots": ["06:15 BJJ", "16:00 MT", "21:00 Spar"] },
+        { "day": "WED", "sub": "07", "slots": ["06:00 MT", "12:00 Open", "18:00 BJJ"] },
+        { "day": "THU", "sub": "08", "slots": ["07:30 BJJ", "17:30 MT", "20:00 Comp"] },
+        { "day": "FRI", "sub": "09", "slots": ["06:00 Open", "12:30 MT", "18:30 BJJ"] },
+        { "day": "SAT", "sub": "10", "slots": ["08:30 MT", "10:30 BJJ", "14:00 Open"] },
+        { "day": "SUN", "sub": "11", "slots": ["09:00 BJJ", "11:00 MT", "—"] }
+      ]
+    },
+    "kfarhata": {
+      "week": "MAY 5 — MAY 11",
+      "days": [
+        { "day": "MON", "sub": "05", "slots": ["06:30 BJJ", "13:00 MT", "19:30 Open"] },
+        { "day": "TUE", "sub": "06", "slots": ["06:00 MT", "12:00 BJJ", "20:00 Spar"] },
+        { "day": "WED", "sub": "07", "slots": ["07:00 Open", "12:30 MT", "18:30 BJJ"] },
+        { "day": "THU", "sub": "08", "slots": ["06:15 MT", "17:00 BJJ", "20:15 Open"] },
+        { "day": "FRI", "sub": "09", "slots": ["06:45 BJJ", "12:00 MT", "19:00 Comp"] },
+        { "day": "SAT", "sub": "10", "slots": ["09:30 MT", "11:30 BJJ", "15:00 Kids"] },
+        { "day": "SUN", "sub": "11", "slots": ["10:30 Open", "12:30 MT", "—"] }
+      ]
+    },
+    "ketermaya": {
+      "week": "MAY 5 — MAY 11",
+      "days": [
+        { "day": "MON", "sub": "05", "slots": ["06:00 MT", "12:00 Open", "18:00 BJJ"] },
+        { "day": "TUE", "sub": "06", "slots": ["07:00 BJJ", "17:00 MT", "20:00 Open"] },
+        { "day": "WED", "sub": "07", "slots": ["06:30 Spar", "13:00 MT", "19:00 BJJ"] },
+        { "day": "THU", "sub": "08", "slots": ["06:00 Open", "12:00 MT", "18:30 Comp"] },
+        { "day": "FRI", "sub": "09", "slots": ["07:15 MT", "12:30 BJJ", "20:00 Spar"] },
+        { "day": "SAT", "sub": "10", "slots": ["09:00 All-level", "11:00 BJJ", "14:00 Open"] },
+        { "day": "SUN", "sub": "11", "slots": ["10:00 Recovery", "12:00 MT", "—"] }
+      ]
+    }
+  },
+  "about": {
+    "eyebrow": "Our mission • Afara Top Team",
+    "pageTitle": "Why martial arts changes lives",
+    "lead": "Benefits that compound — not spreadsheets. Stress relief, structured skill growth, and a crew that holds you accountable.",
+    "goalsTitle": "Our goals",
+    "goalsHeadline": "Make elite coaching accessible. Keep standards high. Leave ego at the door.",
+    "goalsBody": "We build capable humans first — competition paths are optional. Every program ladders skills clearly so you always know what you're training toward.",
+    "benefitsSectionTitle": "Benefits of martial arts",
+    "benefitsLead": "How training tends to surface in daily member check-ins.",
+    "benefits": [
+      { "label": "Discipline & focus", "value": 92 },
+      { "label": "Physical conditioning", "value": 88 },
+      { "label": "Confidence under pressure", "value": 95 }
+    ],
+    "statCoachingEyebrow": "Coaching depth",
+    "statCoachingBig": "10+",
+    "statCoachingText": "Black-belt and pro-level instructors across striking & grappling.",
+    "statMembersEyebrow": "Active members",
+    "statMembersBig": "500+",
+    "statMembersText": "Training sessions logged across all Afara Top Team locations last season.",
+    "backdropImageId": 4753996,
+    "tiles": [
+      { "pexelsId": 4761663, "alt": "Heavy bag training floor" },
+      { "pexelsId": 7991672, "alt": "Grappling and instruction" },
+      { "pexelsId": 4753987, "alt": "Partner drills and mitt work" }
+    ],
+    "extendedPageIntro": "Afara Top Team trains strikers, wrestlers, and hybrid athletes across Saida, Barja, Kfarhata, and Ketermaya. Coaches publish clear expectations, hygiene standards stay non-negotiable, and newcomers get a onboarding path regardless of athletic background.",
+    "pageMetaTitle": "About — Afara Top Team"
+  },
+  "home": {
+    "classesHeading": "Signature classes",
+    "classesSubtitle": "Full-bleed intensity. Tap a program — each one has depth on its own page."
+  }
+}
