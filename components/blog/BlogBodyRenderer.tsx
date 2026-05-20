@@ -12,12 +12,13 @@ const components = {
     image: ({ value }: any) => {
       return (
         <div
-          className={cn('relative mx-auto overflow-hidden rounded-2xl my-8', {
-            'w-full': value.width === 'full' || !value.width,
-            'max-w-4xl': value.width === 'wide',
-            'max-w-2xl': value.width === 'medium',
-            'max-w-md': value.width === 'narrow',
-          })}
+          className={cn(
+            'relative mx-auto overflow-hidden rounded-2xl my-8',
+            (value.width === 'full' || !value.width) && 'w-full',
+            value.width === 'wide' && 'max-w-4xl',
+            value.width === 'medium' && 'max-w-2xl',
+            value.width === 'narrow' && 'max-w-md'
+          )}
         >
           <Image
             src={urlFor(value).url()}
