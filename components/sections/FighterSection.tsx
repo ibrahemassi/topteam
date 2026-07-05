@@ -48,7 +48,7 @@ export function FighterSection({
 
         <div
           className={cn(
-            "grid gap-6 sm:grid-cols-2 lg:grid-cols-4",
+            "-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4 [&::-webkit-scrollbar]:hidden",
             !showHeading && "mt-8",
           )}
         >
@@ -130,7 +130,7 @@ export function FighterSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative aspect-4/5 w-full overflow-hidden rounded-[2.5rem] bg-zinc-900 shadow-2xl"
+                className="group relative aspect-4/5 w-[min(78vw,300px)] shrink-0 overflow-hidden rounded-[2.5rem] bg-zinc-900 shadow-2xl sm:w-full"
               >
                 {f.id ? (
                   <Link href={`/fighters/${f.id}`} className="block h-full w-full">
