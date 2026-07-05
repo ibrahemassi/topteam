@@ -106,29 +106,31 @@ export function LocationsSection({
           </div>
         )}
 
-        {/* Location toggle — centered pill bar */}
-        <div className="flex justify-center">
+        {/* Location toggle — scrollable pill bar */}
+        <div className="flex justify-center px-1">
           <GlassPanel
             className={cn(
-              "inline-flex flex-wrap items-center justify-center gap-1 rounded-full p-1.5 sm:gap-1.5 sm:p-2",
+              "w-full max-w-md overflow-hidden rounded-full p-1.5 sm:max-w-lg sm:p-2",
               glassStrong,
             )}
           >
-            {locations.map((loc) => (
-              <button
-                key={loc.id}
-                type="button"
-                onClick={() => setActiveId(loc.id)}
-                className={cn(
-                  "rounded-full px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-[400ms] ease-[cubic-bezier(0.76,0,0.24,1)] sm:px-5 sm:py-3 sm:text-sm",
-                  activeId === loc.id
-                    ? "bg-[#1f00ff] text-white shadow-[0_0_20px_rgba(31,0,255,0.5)]"
-                    : "text-zinc-300 hover:bg-white/10 hover:text-white",
-                )}
-              >
-                {loc.name}
-              </button>
-            ))}
+            <div className="flex h-11 items-center gap-1 overflow-x-auto [scrollbar-width:none] sm:h-12 [&::-webkit-scrollbar]:hidden">
+              {locations.map((loc) => (
+                <button
+                  key={loc.id}
+                  type="button"
+                  onClick={() => setActiveId(loc.id)}
+                  className={cn(
+                    "shrink-0 rounded-full px-4 py-2.5 text-xs font-semibold uppercase tracking-wider transition-all duration-[400ms] ease-[cubic-bezier(0.76,0,0.24,1)] sm:px-5 sm:py-3 sm:text-sm",
+                    activeId === loc.id
+                      ? "bg-[#1f00ff] text-white shadow-[0_0_20px_rgba(31,0,255,0.5)]"
+                      : "text-zinc-300 hover:bg-white/10 hover:text-white",
+                  )}
+                >
+                  {loc.name}
+                </button>
+              ))}
+            </div>
           </GlassPanel>
         </div>
 
