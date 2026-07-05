@@ -1,13 +1,13 @@
 import { HeroSection } from "@/components/sections/HeroSection";
+import { VisionSection } from "@/components/sections/VisionSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ClassesSection } from "@/components/sections/ClassesSection";
-import {
-  ScheduleBoard,
-  type ScheduleWeek,
-} from "@/components/sections/ScheduleBoard";
+import { LocationsSection } from "@/components/sections/LocationsSection";
+import type { ScheduleWeek } from "@/components/sections/ScheduleMatrix";
 import { FighterSection } from "@/components/sections/FighterSection";
 import { FighterSectionStrip } from "@/components/sections/FighterSectionStrip";
 import { DojoGallerySection } from "@/components/sections/DojoGallerySection";
+import { getLocationsWithCoaches } from "@/lib/locations";
 import { getSiteData } from "@/lib/site-data";
 import { pexelsUrl } from "@/lib/pexels-url";
 
@@ -47,11 +47,9 @@ export default function HomePage() {
     number: (f as any).number ?? "00",
   }));
 
-  const scheduleLocations = site.locations.map((l) => ({
-    id: l.id,
-    name: l.name,
-  }));
+  const locationsWithCoaches = getLocationsWithCoaches(site);
   const scheduleRecord = site.schedule as Record<string, ScheduleWeek>;
+  const locationsConfig = site.locationsSection;
 
   return (
     <>
@@ -60,14 +58,18 @@ export default function HomePage() {
         posterSrc={pexelsUrl(site.hero.posterImageId, 1920)}
         cards={heroCards}
       />
+      <VisionSection variant="home" />
       <FighterSection fighters={fighters} />
       <AboutSection variant="home" />
 
-      <ScheduleBoard
-        heading="Weekly schedule"
-        description="Matrices for every location — swipe columns sideways on small screens if labels clip. Visit our locations page for addresses and contacts."
-        locations={scheduleLocations}
+      <LocationsSection
+        variant="home"
+        locations={locationsWithCoaches}
         scheduleByLocationId={scheduleRecord}
+        sharedVideoSrc={locationsConfig.sharedVideoSrc}
+        posterSrc={pexelsUrl(locationsConfig.posterImageId, 1920)}
+        heading={locationsConfig.heading}
+        description={locationsConfig.description}
       />
 
       {/* <ClassesSection

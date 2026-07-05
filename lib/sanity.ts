@@ -1,15 +1,28 @@
-import { createClient } from 'next-sanity'
+import { createClient, type SanityClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
-export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-  apiVersion: '2024-05-16',
-  useCdn: false, // Set to true for production
-})
+let clientInstance: SanityClient | null = null
 
-const builder = imageUrlBuilder(client)
+export function getSanityClient(): SanityClient | null {
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+  if (!projectId) return null
+
+  if (!clientInstance) {
+    clientInstance = createClient({
+      projectId,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+      apiVersion: '2024-05-16',
+      useCdn: false,
+    })
+  }
+
+  return clientInstance
+}
 
 export function urlFor(source: any) {
-  return builder.image(source)
+  const client = getSanityClient()
+  if (!client) {
+    throw new Error('Sanity is not configured')
+  }
+  return imageUrlBuilder(client).image(source)
 }

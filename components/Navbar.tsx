@@ -10,6 +10,7 @@ import { getAssetPath } from "@/lib/assets";
 const links = [
   { href: "/", label: "Home", match: (p: string) => p === "/" },
   { href: "/about", label: "About", match: (p: string) => p === "/about" },
+  { href: "/vision", label: "Vision", match: (p: string) => p === "/vision" },
   {
     href: "/classes",
     label: "Classes",

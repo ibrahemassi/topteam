@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GlassPanel } from "@/components/GlassPanel";
+import { SectionBackdrop } from "@/components/sections/SectionBackdrop";
 import { cn } from "@/lib/cn";
 import { getSiteData } from "@/lib/site-data";
 import { pexelsUrl } from "@/lib/pexels-url";
@@ -29,6 +30,7 @@ type AboutSectionProps = {
 export function AboutSection({ variant = "home" }: AboutSectionProps) {
   const site = getSiteData();
   const about = site.about;
+  const isHome = variant === "home";
   const backdrop = pexelsUrl(about.backdropImageId, 1920);
   const tiles = about.tiles.map((t, i) => ({
     src: pexelsUrl(t.pexelsId, 900),
@@ -38,24 +40,33 @@ export function AboutSection({ variant = "home" }: AboutSectionProps) {
 
   return (
     <section
-      id={variant === "home" ? "about-preview" : undefined}
-      className="relative overflow-hidden py-16 sm:py-20 lg:py-28"
+      id={isHome ? "about-preview" : undefined}
+      className={cn(
+        "relative overflow-hidden py-16 sm:py-20 lg:py-28",
+        isHome && "border-t border-white/5 bg-black",
+      )}
       aria-labelledby="about-heading"
     >
-      <Image
-        src={backdrop}
-        alt=""
-        fill
-        className="object-cover opacity-35"
-        sizes="100vw"
-        priority={false}
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-b from-black via-[#10011f]/92 to-black"
-        aria-hidden
-      />
-      <div className="absolute inset-0 bg-black/40" aria-hidden />
+      {isHome ? (
+        <SectionBackdrop withBgImage />
+      ) : (
+        <>
+          <Image
+            src={backdrop}
+            alt=""
+            fill
+            className="object-cover opacity-35"
+            sizes="100vw"
+            priority={false}
+            aria-hidden
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-black via-[#10011f]/92 to-black"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-black/40" aria-hidden />
+        </>
+      )}
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">

@@ -50,6 +50,20 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Humanitarian events', value: 'humanitarian-events' },
+          { title: 'Training', value: 'training' },
+          { title: 'News', value: 'news' },
+          { title: 'Fighter updates', value: 'fighter-updates' },
+        ],
+      },
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'array',

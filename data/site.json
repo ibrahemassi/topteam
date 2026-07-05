@@ -233,6 +233,12 @@
       "note": "Golden Gloves finalist"
     }
   ],
+  "locationsSection": {
+    "sharedVideoSrc": "/videos/1.mp4",
+    "posterImageId": 4753996,
+    "heading": "Weekly schedule",
+    "description": "Pick your bay — each location runs the same coaching standard with a localized timetable."
+  },
   "locations": [
     {
       "id": "saida",
@@ -242,7 +248,15 @@
       "region": "South Governorate",
       "postalCode": "1600",
       "phone": "+961 7 000 001",
-      "email": "saida@afaratopteam.demo"
+      "email": "saida@afaratopteam.demo",
+      "mapLat": 33.5606,
+      "mapLng": 35.3981,
+      "coaches": [
+        { "coachId": "marisol-vek", "imagePath": "/imgs/team/t1.png", "classLabel": "Muay Thai" },
+        { "coachId": "jax-pollard", "imagePath": "/imgs/team/t2.png", "classLabel": "Boxing" },
+        { "coachId": "river-cheng", "imagePath": "/imgs/team/t4.png", "classLabel": "MMA" },
+        { "coachId": "dana-ortega", "imagePath": "/imgs/team/t3.png", "classLabel": "Wrestling" }
+      ]
     },
     {
       "id": "barja",
@@ -252,7 +266,14 @@
       "region": "Mount Lebanon",
       "postalCode": "1501",
       "phone": "+961 7 000 002",
-      "email": "barja@afaratopteam.demo"
+      "email": "barja@afaratopteam.demo",
+      "mapLat": 33.7722,
+      "mapLng": 35.4847,
+      "coaches": [
+        { "coachId": "jax-pollard", "imagePath": "/imgs/team/t2.png", "classLabel": "Boxing" },
+        { "coachId": "dana-ortega", "imagePath": "/imgs/team/t3.png", "classLabel": "Wrestling" },
+        { "coachId": "marisol-vek", "imagePath": "/imgs/team/t1.png", "classLabel": "Kickboxing" }
+      ]
     },
     {
       "id": "kfarhata",
@@ -262,7 +283,15 @@
       "region": "Mount Lebanon",
       "postalCode": "1502",
       "phone": "+961 7 000 003",
-      "email": "kfarhata@afaratopteam.demo"
+      "email": "kfarhata@afaratopteam.demo",
+      "mapLat": 34.1239,
+      "mapLng": 36.0389,
+      "coaches": [
+        { "coachId": "dana-ortega", "imagePath": "/imgs/team/t3.png", "classLabel": "Wrestling" },
+        { "coachId": "river-cheng", "imagePath": "/imgs/team/t4.png", "classLabel": "MMA" },
+        { "coachId": "marisol-vek", "imagePath": "/imgs/team/t1.png", "classLabel": "Muay Thai" },
+        { "coachId": "jax-pollard", "imagePath": "/imgs/team/t2.png", "classLabel": "Kids boxing" }
+      ]
     },
     {
       "id": "ketermaya",
@@ -272,7 +301,14 @@
       "region": "South Governorate",
       "postalCode": "1601",
       "phone": "+961 7 000 004",
-      "email": "ketermaya@afaratopteam.demo"
+      "email": "ketermaya@afaratopteam.demo",
+      "mapLat": 33.5289,
+      "mapLng": 35.3812,
+      "coaches": [
+        { "coachId": "river-cheng", "imagePath": "/imgs/team/t4.png", "classLabel": "MMA" },
+        { "coachId": "marisol-vek", "imagePath": "/imgs/team/t1.png", "classLabel": "Muay Thai" },
+        { "coachId": "jax-pollard", "imagePath": "/imgs/team/t2.png", "classLabel": "Boxing" }
+      ]
     }
   ],
   "schedule": {
@@ -324,6 +360,170 @@
         { "day": "SUN", "sub": "11", "slots": ["10:00 Recovery", "12:00 MT", "—"] }
       ]
     }
+  },
+  "vision": {
+    "eyebrow": "Afara Top Team • humanitarian arm",
+    "heading": "Our vision",
+    "lead": "Fighters train to be strong — we channel that strength back into the communities that raised us.",
+    "extendedPageIntro": "Afara Top Team's NGO work sits alongside our academies: food drives, youth mentorship, disaster relief, and long-term community partnerships across Lebanon. The dojo builds discipline; the outreach builds trust.",
+    "pageMetaTitle": "Our Vision — Afara Top Team",
+    "hero": {
+      "badge": "Community impact",
+      "headline": "Strength in the gym. Service in the streets.",
+      "subheadline": "Our humanitarian arm turns athlete energy into real community impact — from Saida to Ketermaya and every village in between.",
+      "imagePexelsId": 6646879,
+      "highlightStat": {
+        "label": "Families reached",
+        "value": "1,200+",
+        "trend": "+48%"
+      }
+    },
+    "pillarsSectionTitle": "Our vision",
+    "pillarsSectionLead": "Six commitments that guide every outreach program we run.",
+    "homePreview": {
+      "headline": "Community impact built on the mat"
+    },
+    "pillars": [
+      {
+        "step": "01",
+        "icon": "aid",
+        "title": "Community aid",
+        "description": "Food parcels, winter supplies, and essentials delivered directly to families who need them most.",
+        "imagePexelsId": 6646879
+      },
+      {
+        "step": "02",
+        "icon": "youth",
+        "title": "Youth outreach",
+        "description": "Free mat days, mentorship, and discipline programs that give kids structure outside the ring.",
+        "imagePexelsId": 4753987
+      },
+      {
+        "step": "03",
+        "icon": "relief",
+        "title": "Disaster response",
+        "description": "Rapid mobilization when crises hit — volunteers, supplies, and on-the-ground coordination.",
+        "imagePexelsId": 6994994
+      },
+      {
+        "step": "04",
+        "icon": "impact",
+        "title": "Lasting impact",
+        "description": "Partnerships with local leaders so aid isn't a one-off — it's a relationship we maintain.",
+        "imagePexelsId": 6646916
+      },
+      {
+        "step": "05",
+        "icon": "volunteer",
+        "title": "Volunteer corps",
+        "description": "Fighters, coaches, and families who show up on weekends — packing, driving, and lifting where it counts.",
+        "imagePexelsId": 6646918
+      },
+      {
+        "step": "06",
+        "icon": "partners",
+        "title": "Local partners",
+        "description": "Municipalities, NGOs, and community leaders who help us reach the right people at the right time.",
+        "imagePexelsId": 6646920
+      }
+    ],
+    "mission": {
+      "eyebrow": "What we do",
+      "heading": "Our mission",
+      "lead": "Three pillars of action — every event documented, every hand counted.",
+      "cards": [
+        {
+          "title": "Show up first",
+          "description": "When a community asks for help, our teams mobilize before the cameras arrive. Coaches, fighters, and volunteers on the ground within days."
+        },
+        {
+          "title": "Train to serve",
+          "description": "Members contribute through volunteer hours, fundraising drives, and skills — logistics, medical support, youth coaching, and more."
+        },
+        {
+          "title": "Stay accountable",
+          "description": "Every humanitarian event is logged, photographed, and shared transparently. Donors and partners see exactly where resources go."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "24+",
+        "label": "Events held",
+        "detail": "Humanitarian drives and community programs since launch."
+      },
+      {
+        "value": "1,200+",
+        "label": "Families reached",
+        "detail": "Aid parcels, meals, and supplies delivered across all branches."
+      },
+      {
+        "value": "80+",
+        "label": "Volunteers",
+        "detail": "Coaches, fighters, and members who show up for outreach."
+      }
+    ],
+    "eventsSection": {
+      "eyebrow": "On the ground",
+      "heading": "Humanitarian events",
+      "lead": "Real work, real communities — stories from our outreach programs."
+    },
+    "humanitarianEvents": [
+      {
+        "id": "winter-aid-saida",
+        "title": "Winter aid drive — Saida",
+        "date": "2025-12-14",
+        "location": "Saida",
+        "excerpt": "200+ winter supply kits distributed to families across the coastal district, with hot meals served on site.",
+        "imagePexelsId": 6646879,
+        "slug": "winter-aid-saida"
+      },
+      {
+        "id": "youth-mat-day-barja",
+        "title": "Free youth mat day — Barja",
+        "date": "2025-10-22",
+        "location": "Barja",
+        "excerpt": "Open gym day for 60+ kids — intro to boxing and wrestling, plus mentorship talks from our coaching staff.",
+        "imagePexelsId": 4753987,
+        "slug": "youth-mat-day-barja"
+      },
+      {
+        "id": "flood-relief-kfarhata",
+        "title": "Flood relief — Kfarhata",
+        "date": "2025-03-08",
+        "location": "Kfarhata",
+        "excerpt": "Emergency supply run after seasonal flooding — water, blankets, and cleanup crews deployed within 48 hours.",
+        "imagePexelsId": 6994994,
+        "slug": "flood-relief-kfarhata"
+      },
+      {
+        "id": "ramadan-meals-ketermaya",
+        "title": "Ramadan meal packs — Ketermaya",
+        "date": "2025-03-28",
+        "location": "Ketermaya",
+        "excerpt": "500 iftar meal packs prepared and delivered in partnership with local community leaders.",
+        "imagePexelsId": 6646916,
+        "slug": "ramadan-meals-ketermaya"
+      },
+      {
+        "id": "school-supplies-saida",
+        "title": "Back-to-school supplies — Saida",
+        "date": "2024-09-05",
+        "location": "Saida",
+        "excerpt": "Backpacks, notebooks, and uniforms for 150 students ahead of the new school year.",
+        "imagePexelsId": 7551692,
+        "slug": "school-supplies-saida"
+      },
+      {
+        "id": "health-screening-barja",
+        "title": "Community health day — Barja",
+        "date": "2024-06-18",
+        "location": "Barja",
+        "excerpt": "Free basic health screenings and fitness assessments for residents, run by volunteer nurses and coaches.",
+        "imagePexelsId": 6646923,
+        "slug": "health-screening-barja"
+      }
+    ]
   },
   "about": {
     "eyebrow": "Our mission • Afara Top Team",

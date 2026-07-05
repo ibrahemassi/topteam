@@ -12,6 +12,7 @@ const business = [
 
 const company = [
   { href: "/about", label: "About" },
+  { href: "/vision", label: "Vision" },
   { href: "#", label: "Careers" },
   { href: "#", label: "Press" },
   { href: "#", label: "Legal" },

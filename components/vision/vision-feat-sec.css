@@ -1,0 +1,94 @@
+.vision-feat-sec .vision-feat-item {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 50px 5px;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.vision-feat-sec .vision-feat-item:hover {
+  box-shadow: 0 14px 28px -8px rgba(255, 194, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.vision-feat-sec .vision-feat-item .vision-feat-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.vision-feat-sec .vision-feat-box1 {
+  border-radius: 70px 70px 0 70px;
+}
+
+.vision-feat-sec .vision-feat-box2 {
+  border-radius: 70px 70px 0 0;
+}
+
+.vision-feat-sec .vision-feat-box3 {
+  border-radius: 70px 70px 70px 0;
+}
+
+.vision-feat-sec .vision-feat-box4 {
+  border-radius: 70px 0 70px 70px;
+}
+
+.vision-feat-sec .vision-feat-box5 {
+  border-radius: 0 0 70px 70px;
+}
+
+.vision-feat-sec .vision-feat-box6 {
+  border-radius: 0 70px 70px 70px;
+}
+
+.vision-feat-sec .vision-feat-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.vision-feat-sec .vision-feat-icon img {
+  width: 40px;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .vision-feat-sec .vision-feat-item {
+    padding: 16px 4px;
+  }
+
+  .vision-feat-sec .vision-feat-item .vision-feat-label {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .vision-feat-sec .vision-feat-box1 {
+    border-radius: 28px 28px 0 28px;
+  }
+
+  .vision-feat-sec .vision-feat-box2 {
+    border-radius: 28px 28px 0 0;
+  }
+
+  .vision-feat-sec .vision-feat-box3 {
+    border-radius: 28px 28px 28px 0;
+  }
+
+  .vision-feat-sec .vision-feat-box4 {
+    border-radius: 28px 0 28px 28px;
+  }
+
+  .vision-feat-sec .vision-feat-box5 {
+    border-radius: 0 0 28px 28px;
+  }
+
+  .vision-feat-sec .vision-feat-box6 {
+    border-radius: 0 28px 28px 28px;
+  }
+
+  .vision-feat-sec .vision-feat-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
